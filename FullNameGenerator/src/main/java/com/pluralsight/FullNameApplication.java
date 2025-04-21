@@ -1,6 +1,5 @@
 package com.pluralsight;
 
-
 import java.util.Scanner;
 
 public class FullNameApplication {
@@ -19,15 +18,18 @@ public class FullNameApplication {
         System.out.println("Suffix" );
         String Suffix = scanner.nextLine() .trim();
 
-        System.out.println("%s %s %s" );
 
-        String fullName = "";
-        if (!firstName.isEmpty()){
-            fullName = fullName + firstName;
+        StringBuilder fullName = new StringBuilder();
 
+        fullName.append(firstName);
+
+        if (!lastName.isEmpty()){
+            fullName.append(" ").append(lastName);
         }
+        if (!Suffix.isEmpty());
+        fullName.append(", ").append(Suffix);
 
-
+        System.out.println("Full Name: " + fullName);
 
 
     }
